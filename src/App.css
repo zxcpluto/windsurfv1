@@ -1,0 +1,145 @@
+:root {
+  --primary-color: #1d1d1f;
+  --secondary-color: #86868b;
+  --accent-color: #2997ff;
+  --background-color: #ffffff;
+}
+
+#root {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  background-color: var(--background-color);
+}
+
+.blog-header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+}
+
+.header-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.blog-title {
+  font-size: 56px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+}
+
+.blog-subtitle {
+  font-size: 24px;
+  font-weight: 400;
+  color: #86868b;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.blog-content {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.content-section {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.section-text {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+}
+
+.image-container {
+  width: 100%;
+  height: 400px;
+  margin: 40px 0;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.content-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.quote {
+  font-size: 24px;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--primary-color);
+  text-align: center;
+  margin: 40px 0;
+  padding: 20px;
+  border-left: 4px solid var(--accent-color);
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-title {
+    font-size: 40px;
+  }
+  
+  .blog-subtitle {
+    font-size: 20px;
+  }
+  
+  .section-title {
+    font-size: 28px;
+  }
+  
+  .image-container {
+    height: 300px;
+  }
+}
